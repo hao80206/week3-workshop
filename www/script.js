@@ -27,6 +27,8 @@ $(document).ready(function() {
                     // Redirect to account after short delay
                     setTimeout(() => {
                         window.location.href = "/account";
+                        localStorage.setItem('name', response.name);
+                        localStorage.setItem('email', response.email);
 
                     },1000)
                 } else {

@@ -10,9 +10,16 @@
   <div class="account-container">
     <img src="./image/image.png" alt="User Profile Image" width="300" height="200" />
     <h2>Welcome!</h2>
-    <p><strong>Name: </strong>Ruby Smith</p>
+    <p><strong>Name: </strong><span id="name"></span></p>
+    <p><strong>Email: </strong><span id="email"></span></p>
     <p><strong>Member Since:</strong> January 2023</p>
     <p><strong>Account Status:</strong> Active</p>
+
+    <script>
+        document.getElementById("name").textContent = localStorage.getItem("name");
+        document.getElementById("email").textContent = localStorage.getItem("email");
+    </script>
+    
   </div>
 </body>
 </html>
