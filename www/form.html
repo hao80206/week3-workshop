@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Week3</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form id = "dataform">
+        <label for ="email">Email: </label>
+        <input type="text" name="email" id="email"/>
+        <br>
+        <label for ="password">Password: </label>
+        <input type="text" name="password" id="password"/>
+        <br>
+        <button type="submit">Submit</button>
+        
+        <div id="errormsg" class="hidemessage">User credentials do not match</div>
+        <div id="successmsg" class="hidemessage">Login successful!</div>
+    </form>
+
+</body>
+</html>
