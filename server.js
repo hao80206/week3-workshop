@@ -2,6 +2,7 @@ var express= require("express");
 var app = express();
 var http = require(`http`).Server(app); //used to provide http functionality
 const path = require("path");
+const validator = require("validator")
 
 app.use(express.static(__dirname + `/www`));
 app.use(express.json());
@@ -37,7 +38,8 @@ app.post('/login', function(req,res) {
     let name = '';
     let valid = false;
   
-    if (typeof email === 'string' && typeof password === 'string') {
+    
+    if (validator.isEmail(email) && (typeof email === 'string' && typeof password === 'string')) {
         const account = users.find(account => account.email === email && account.password === password);
       if (account) {
         valid = true;
